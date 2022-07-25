@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
+from django.views.generic import ListView
+
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
