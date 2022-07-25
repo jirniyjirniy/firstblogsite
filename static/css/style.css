@@ -1,0 +1,29 @@
+.carousel-item {
+    height: 20rem;
+    width: 100%;
+}
+.bg-dark {
+    background-color: #000000!important;
+}
+.btn-outline-success {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+.home-slider {
+    padding: 0;
+}
+
+.home-slider h5{
+    font-size: 60px;
+}
+
+.home-slider p{
+    font-size: 30px;
+}
+.carousel-caption {
+    bottom: 100px;
+}
+
+.carousel-item {
+    height: 20rem;
+}

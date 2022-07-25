@@ -1,3 +1,4 @@
+{% load static %}
 <div class="container-fluid home-slider">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -7,21 +8,21 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/first_img.jpg" class="d-block w-100" alt="Первая картинка">
+        <img src="{% static 'img/first_img.jpg' %}" class="d-block w-100" alt="Первая картинка">
         <div class="carousel-caption d-none d-md-block">
           <h5>Это описание первого слайда</h5>
           <p>Тут можно писать все что угодно</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/second_image.jpg" class="d-block w-100" alt="Вторая картинка">
+        <img src="{% static 'img/second_image.jpg' %}" class="d-block w-100" alt="Вторая картинка">
         <div class="carousel-caption d-none d-md-block">
           <h5>Это описание второго слайда</h5>
           <p>Тут можно писать все что угодно</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/third_img.jpg" class="d-block w-100" alt="Третья картинка">
+        <img src="{% static 'img/third_img.jpg' %}" class="d-block w-100" alt="Третья картинка">
         <div class="carousel-caption d-none d-md-block">
           <h5>Это описание третьего слайда</h5>
           <p>Тут можно писать все что угодно</p>

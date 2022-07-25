@@ -1,133 +1,123 @@
-{% include './base.html' %}
-<html lang="en">
-{% block title %}Главная Страница{% endblock %}
-<body>
-{% block header%}
+{% extends './base.html' %}
+{% load static %}
+{% block title %}Главная страница моего блога{% endblock %}
+
+{% block header %}
     {% include './blog/slider.html' %}
 {% endblock %}
+
 {% block content %}
-<div class="container">
-    <h1 class="my-3">Последние записи блога</h1>
-    <div class="row">
+    <div class="container">
+      <h1 class="my-3">Последние записи блога</h1>
+      <div class="row">
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="img/third_img.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">Заголовок</h4>
-                    <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        </div>
-                        <small class="text-muted">22.10.2020</small>
-                    </div>
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'img/third_img.jpg' %}" alt="" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Заголовок</h4>
+              <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                 </div>
+                <small class="text-muted">22.10.2020</small>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="img/second_image.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">Заголовок</h4>
-                    <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        </div>
-                        <small class="text-muted">21.10.2020</small>
-                    </div>
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'img/second_image.jpg' %}" alt="" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Заголовок</h4>
+              <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                 </div>
+                <small class="text-muted">21.10.2020</small>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="img/first_img.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">Заголовок</h4>
-                    <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        </div>
-                        <small class="text-muted">20.10.2020</small>
-                    </div>
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'img/first_img.jpg' %}" alt="" class="card-img-top">
+            <div class="card-body">
+            <h4 class="card-title">Заголовок</h4>
+            <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                 </div>
+                <small class="text-muted">20.10.2020</small>
+              </div>
             </div>
+          </div>
         </div>
 
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="img/first_img.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">Заголовок</h4>
-                    <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        </div>
-                        <small class="text-muted">19.10.2020</small>
-                    </div>
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'img/first_img.jpg' %}" alt="" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Заголовок</h4>
+              <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                 </div>
+                <small class="text-muted">19.10.2020</small>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="img/second_image.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">Заголовок</h4>
-                    <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        </div>
-                        <small class="text-muted">18.10.2020</small>
-                    </div>
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'img/second_image.jpg' %}" alt="" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Заголовок</h4>
+              <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                 </div>
+                <small class="text-muted">18.10.2020</small>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="img/third_img.jpg" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">Заголовок</h4>
-                    <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        </div>
-                        <small class="text-muted">17.10.2020</small>
-                    </div>
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'img/third_img.jpg' %}" alt="" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title">Заголовок</h4>
+              <p class="card-text">Это красткое описание поста. Это красткое описание поста. Это красткое описание поста. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                 </div>
+                <small class="text-muted">17.10.2020</small>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}
+
 {% block pagination %}
-<nav aria-label="Paginate me">
-    <ul class="pagination justify-content-center">
+    <nav aria-label="Paginate me">
+      <ul class="pagination justify-content-center">
         <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Предыдущая</a>
+          <a class="page-link" href="#" tabindex="-1">Предыдущая</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item">
-            <a class="page-link" href="#">Следующая</a>
+          <a class="page-link" href="#">Следующая</a>
         </li>
-    </ul>
-</nav>
-<br>
+      </ul>
+    </nav>
+    <br>
 {% endblock %}
-{% block footer %}
-    {% include './blog/footer.html' %}
-{% endblock %}
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
-</body>
-</html>
