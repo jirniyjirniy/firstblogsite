@@ -1,0 +1,44 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block header %}
+    <div class="container-fluid home-slider">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-color: #343a40!important">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>{{ post.h1 }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ post.h1 }}</li>
+                </ol>
+            </nav>
+            <img class="img-fluid rounded " src="{{ post.image.url }}" alt="">
+            <hr>
+            <p class="lead">
+                {{ post.content|safe }}
+            </p>
+            <hr>
+            <p class="lead text-right">Автор: {{ post.author }}</p>
+            <hr>
+            <p class="text-right">Опубликовано {{ post.created_at }}</p>
+            <hr>
+            {% include './blog/comments.html' %}
+        </div>
+    </div>
+    {% include './blog/aside.html' %}
+</div>
+{% endblock %}
