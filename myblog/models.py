@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.views.generic import ListView
 
 from ckeditor_uploader.fields import RichTextUploadingField
-
+from taggit.managers import TaggableManager
 
 class Post(models.Model):
     h1 = models.CharField(max_length=200)
@@ -15,8 +15,10 @@ class Post(models.Model):
     image = models.ImageField()
     created_at = models.DateField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    tag = models.CharField(max_length=200)
+    tag = TaggableManager()
 
     def __str__(self):
         return self.title
 
+class Comment(models.Model):
+    pass
