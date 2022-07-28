@@ -1,4 +1,5 @@
 from django.core.mail import send_mail, BadHeaderError
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.core.paginator import Paginator
@@ -12,7 +13,6 @@ class MainView(View):
     def get(self, request, *args, **kwargs):
         post = Post.objects.all()
         paginator = Paginator(post, 6)
-
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'myblog/home.html', context={
@@ -80,7 +80,7 @@ class FeedBackView(View):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             try:
-                send_mail(f'От {name} | {subject}', message, from_email, ['amromashov@gmail.com'])
+                send_mail(f'От {name} | {subject}', message, from_email, ['nik.vardi127@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Невалидный заголовок')
             return HttpResponseRedirect('success')
@@ -92,4 +92,21 @@ class SuccessView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'myblog/succes.html', context={
             'title': 'Спасибо'
+        })
+
+class SearchResultsView(View):
+    def get(self, request, *args, **kwargs):
+        query = self.request.GET.get('q')
+        results = ''
+        if query:
+            results = Post.objects.filter(
+                Q(h1__icontains=query) | Q(content__icontains=query)
+            )
+        paginator = Paginator(results, 6)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'myblog/search.html', context={
+            'title': 'Поиск',
+            'results': page_obj,
+            'count': paginator.count
         })
